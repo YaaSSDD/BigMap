@@ -19,19 +19,6 @@ cat /sys/module/kvm_intel/parameters/enable_apicv
 cat /sys/module/kvm_intel/parameters/nested
 
 
-
-read -p ": enter you iso path" ISO
-read -p ": enter you iso format" FORMAT
-read -p ": enter you size disk (vm_in_vm !L1!)" SIZE_DISK
-read -p ": enter you ram peer (vm_in_vm !L1!)" RAM
-read -p ": enter number vcpus allocated peer (vm_in_vm !L1!)" VCPU
-read -p ": enter number VM create (vm_in_vm !L1!)" VM_NBR
-read -p ": enter name for the vm's (nommage name+CurrentIndex) (vm_in_vm !L1!)" BASE_NAME
-
-
-
-
-
 #############################
 ####QEMU/LIBVIRT/KVM
 #############################
@@ -88,6 +75,19 @@ iptables -A INPUT -p udp -j ACCEPT
 iptables -A FORWARD -p tcp -j ACCEPT
 iptables -A OUTPUT -p tcp -j ACCEPT
 iptables -A OUTPUT -p udp -j ACCEPT
+
+read -p ": enter you iso path" ISO
+read -p ": enter you iso format" FORMAT
+read -p ": enter you size disk (vm_in_vm !L1!)" SIZE_DISK
+read -p ": enter you ram peer (vm_in_vm !L1!)" RAM
+read -p ": enter number vcpus allocated peer (vm_in_vm !L1!)" VCPU
+read -p ": enter number VM create (vm_in_vm !L1!)" VM_NBR
+read -p ": enter name for the vm's (nommage name+CurrentIndex) (vm_in_vm !L1!)" BASE_NAME
+
+
+
+
+
 
 
 
