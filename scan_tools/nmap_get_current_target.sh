@@ -31,10 +31,10 @@ cat "ip.txt" | while  read ligne ; do
   touch rapportNmap.txt
   ThisTarget=${AllIpTab[$index]}
   #nmap -sS -O -p- -Pn $ThisTarget
-  Service=$( sudo nmap $ThisTarget )
+  Service=$( nmap $ThisTarget )
   echo $Service >> rapportNmap.txt
-  sudo touch CleanNmap.txt
-  sudo chmod 755 CleanNmap.txt
+  touch CleanNmap.txt
+  chmod 755 CleanNmap.txt
 
   #echo $DYNAMIC_TARGET
   DYNAMIC_PATH_DIR=$( pwd )
