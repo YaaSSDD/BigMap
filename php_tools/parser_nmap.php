@@ -30,7 +30,7 @@ if ($handle) {
     $i++;
     }
     }
-    //open failed($buffer);
+    //fgets failed($buffer);
     if (!feof($handle)) 
     {
         echo "Erreur: fgets() a échoué\n";
