@@ -3,7 +3,6 @@
 Shot ()
 {
     NOOK=false
-
     while [ "NOOK" != "true" ] ; do
 	C1=192;
 	C2=168;
@@ -18,7 +17,6 @@ Shot ()
 	touch rapport-nmap.txt
 	nmap -sV -Pn -O $ThisIp >> rapport-nmap.txt
     php parser.php
-
 	mv parser.php ../
 	cd ../
     done
