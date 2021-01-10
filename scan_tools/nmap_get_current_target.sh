@@ -31,7 +31,7 @@ cat "ip.txt" | while  read ligne ; do
   touch rapportNmap.txt
   ThisTarget=${AllIpTab[$index]}
   #nmap -sS -O -p- -Pn $ThisTarget
-  Service=$( nmap $ThisTarget )
+  Service=$( nmap -sV -Pn -O $ThisTarget )
   echo $Service >> rapportNmap.txt
   touch CleanNmap.txt
   chmod 755 CleanNmap.txt
