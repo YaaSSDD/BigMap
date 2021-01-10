@@ -1,5 +1,4 @@
 <?php
-$DynamicTarget = getenv("DYNAMIC_TARGET");
 $path = "rapport-nmap.txt";
 $handle = @fopen($path, "r");
 $i = 0;
