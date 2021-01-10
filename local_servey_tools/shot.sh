@@ -16,7 +16,7 @@ Shot ()
 	cd $ThisIp
 	touch rapport-nmap.txt
 	nmap -sV -Pn -O $ThisIp >> rapport-nmap.txt
-    php parser.php
+	php parser.php
 	mv parser.php ../
 	cd ../
     done
