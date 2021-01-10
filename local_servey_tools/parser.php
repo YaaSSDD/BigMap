@@ -11,7 +11,7 @@ $buffer;
 if ($handle) {
     while (($buffer = fgets($handle, 4096)) !== false) 
     {   
-        //var_dump($buffer);
+        //EXPLODE;
         $pieces = explode(" ", $buffer);
         $pieces_lenght = count($pieces);
         $point = $pieces_lenght - 1;
@@ -30,6 +30,7 @@ if ($handle) {
     $i++;
     }
     }
+    //ERROR FGETS;
     if (!feof($handle)) 
     {
         echo "Erreur: fgets() a échoué\n";
