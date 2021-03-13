@@ -20,9 +20,8 @@ Main ()
 
   echo "
   -Services list :
-    -random_scan :
-          -auto random scan
-    -scan_tools :
+    -random_planet :
+          -auto random sca    -scan_tools :
           -nikto_audit
           -nmap_get_current_targer
     -docker_tools  :
