@@ -7,18 +7,12 @@ IFS=$'\n\r'
   IpTab=()
   I=0
   StringLimite=endpoint
-    ##call bettercap for scan localNetwork
-
-    #!!!!decommenter pour activer le scan bettercap uner fois les test appliquer !!!!!!!
-    #sudo bettercap -eval "events.stream off; set events.stream.output ~/bettercap-events.log; events.stream on; net.sniff on"
-
+    sudo bettercap -eval "events.stream off; set events.stream.output ~/bettercap-events.log; events.stream on; net.sniff on"
     Path="~/bettercap-events.log"
     cp ~/bettercap-events.log .
     cat bettercap-events.log | while  read ligne ; do 
       IpTab[$I]="$ligne"
-      #echo ${IpTab[$I]}
       OneLigne=${IpTab[$I]}
-      #grep '(?<=endpoint:).*'
       ### parse logfile Bettercap 
       IpDetected=$(  echo $OneLigne | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | sort -u )
       echo $IpDetected >> ipTmp.txt
